@@ -24,7 +24,7 @@ const formSubmitHandler = data => {
   
     const newName=data.name
 
-    if (contacts.find(obj => obj.name === newName)) {
+    if (contacts.find(obj => obj.name.toLowerCase() === newName.toLowerCase())) {
      return alert(` ${newName} is already in contacts`);
     } 
     addNowEllContacts(data.name, data.number);
